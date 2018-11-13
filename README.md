@@ -1,5 +1,5 @@
 # miniSerial
-Very lean software Serial substitute
+Very lean software-based Serial substitute.
 
 This library was designed for STM32F030F4P6 ARM M0 board, which is limited to 16k of flash, and has difficulty fitting in the regular Serial function in your sketches.  It has a minimal flash footprint, and uses no interrupts. Its functions are simple, and do NOT align with the "println()" type functions of regular Serial, because the print functionality is code-expensive.
 
