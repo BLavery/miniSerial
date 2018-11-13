@@ -1,7 +1,7 @@
 # miniSerial
 Very lean software-based Serial substitute.
 
-<img align="right" src="P1070121.JPG">This library was designed for $3 STM32F030F4P6 ARM M0 board, which is limited to 16k of flash. This "baby" board has difficulty compiling the regular Serial function into your sketches.  MiniSerial has a minimal flash footprint, and uses no interrupts. Its functions are simple, but they do NOT align with the "println()" type functions of regular Serial.
+This library was designed for $3 STM32F030F4P6 ARM M0 board, which is limited to 16k of flash. This "baby" board has difficulty compiling the regular Serial function into your sketches.  MiniSerial has a minimal flash footprint, and uses no interrupts. Its functions are simple, but they do NOT align with the "println()" type functions of regular Serial.
 
 Baudrate is configurable. 19200 looks ideal. Pins are configurable, and are driven only by digitalWrite and digitalRead.
 
