@@ -20,7 +20,7 @@ Serial functions:
 	void txBin(int j, bool lf=false) ;
 	void txHex(int j, bool lf=false) ;
   
-	void run(void);  // needed in loop() to be reading incoming chars (they go to buffer)
+	void run(void);  // Serial.run();  needed in loop() to be reading incoming chars (they go to buffer)
 	int  rxChar(void); // fetch a char from incoming buffer.   -1 = nothing
 
 Please find the code here:
