@@ -7,7 +7,7 @@ Baudrate is configurable. 19200 looks ideal. Pins are configurable, and are driv
 
 Receive functions are buffered, and your sketch suffers no blocking. But you MUST supply a Serial.run() call in your loop(), and that must be called at high speed without other code doing any delay() or blocking. (For example, a 50 uSec delay will miss a complete "bit" at 19200.) 
 
-Transmit functions are not buffered. Your loop() code will block during transmit. (Eg about 0.6 mSec/chr at 19200.) But note that while your code will wait for the UART transmit function to complete, the UART receive will still be processing and buffering. 
+Transmit functions are not buffered. Your loop() code will block during transmit. (Eg about 0.6 mSec/chr at 19200.) But note that while your loop() code will wait for the UART transmit function to complete, the UART receive will still be processing and buffering. 
 
 
 
