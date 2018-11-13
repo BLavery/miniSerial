@@ -9,7 +9,19 @@ Receive functions are buffered, and your sketch suffers no blocking. But you MUS
 
 Transmit functions are not buffered. Your loop() code will block during transmit. (Eg about 0.6 mSec/chr at 19200.) But note that while your loop() code will wait for the UART transmit function to complete, the UART receive will still be processing and buffering. 
 
+Serial functions:
 
+	void begin(int baudrate = 19200, int txpin = PA9, int rxpin = PA10);  // in setup(), 
+        parameters optional, eg Serial.begin();
+  
+	void txByte(unsigned char data, bool lf=false);  // the optional second parameter can add linefeed
+	void txStr(char * str, bool lf=false);
+	void txInt(int j, bool lf=false) ;
+	void txBin(int j, bool lf=false) ;
+	void txHex(int j, bool lf=false) ;
+  
+	void run(void);  // needed in loop() to be reading incoming chars (they go to buffer)
+	int  rxChar(void); // fetch a char from incoming buffer.   -1 = nothing
 
 Please find the code here:
 
