@@ -15,4 +15,4 @@ Please find the code here:
 
 https://github.com/BLavery/STM32F030F4P6-Arduino/tree/master/Arduino/libraries/miniSerial
 
-Despite the original target of small STM32 chip, there is no reason that miniSerial cannot be used in other scenarios.
+Despite the original target of small STM32 chip, there is no reason that miniSerial may not be very useable in other scenarios.
