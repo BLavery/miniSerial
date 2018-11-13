@@ -11,6 +11,8 @@ Transmit functions are not buffered. Your loop() code will block during transmit
 
 Serial functions:
 
+	#include "miniSerial.h"      // that's it! You have a "Serial"
+	
 	void begin(int baudrate = 19200, int txpin = PA9, int rxpin = PA10);  // in setup(), 
         parameters optional, eg Serial.begin();
   
