@@ -1,7 +1,7 @@
 # miniSerial
 Very lean software-based Serial substitute.
 
-This library was designed for $3 STM32F030F4P6 ARM M0 board, which is limited to 16k of flash. This "baby" board has difficulty compiling the regular Serial function into your sketches.  MiniSerial has a minimal flash footprint, and uses no interrupts. Its functions are simple, but they do NOT align with the "println()" type functions of regular Serial.
+This library was designed for $3 STM32F030F4P6 ARM M0 board, which is limited to 16k of flash. This "baby" board has difficulty compiling the regular Serial function into your sketches.  MiniSerial has a minimal flash footprint, and uses no interrupts. Its functions are simple, a subset of the "print()" type functions of regular Serial.
 
 <img align="right" src="STM32F030-Dev-Brd.jpg">Baudrate is configurable. 19200 looks ideal, but higher than that is no good. Pins are configurable, and are driven only by digitalWrite and digitalRead.
 
@@ -16,14 +16,10 @@ Serial functions:
 	void begin(int baudrate = 19200, int txpin = PA9, int rxpin = PA10);  // in setup(), 
         parameters optional, eg Serial.begin();
   
-	void txByte(unsigned char data, bool lf=false);  // the optional second parameter can add linefeed
-	void txStr(char * str, bool lf=false);
-	void txInt(int j, bool lf=false) ;
-	void txBin(int j, bool lf=false) ;
-	void txHex(int j, bool lf=false) ;
+
   
 	void run(void);  // Serial.run();  needed in loop() to be reading incoming chars (they go to buffer)
-	int  rxChar(void); // fetch a char from incoming buffer.   -1 = nothing
+	int  read(void); // fetch a char from incoming buffer.   -1 = nothing
 
 Please find the code here:
 
