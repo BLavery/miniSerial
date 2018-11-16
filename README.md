@@ -15,11 +15,19 @@ Serial functions:
 	
 	void begin(int baudrate = 19200, int txpin = PA9, int rxpin = PA10);  // in setup(), 
         parameters optional, eg Serial.begin();
-  
-
-  
+        void write(unsigned char data);
+        void print(double float_num, int prec=2);	
+	void print(char* str);
+        void print(int, int = DEC);
+        void print(long, int = DEC);
+        void println(double float_num, int prec=2);	
+	void println(char* str = ""); 
+        void println(int, int = DEC);
+        void println(long, int = DEC);
 	void run(void);  // Serial.run();  needed in loop() to be reading incoming chars (they go to buffer)
 	int  read(void); // fetch a char from incoming buffer.   -1 = nothing
+
+Avoid if posible the "double" print function. It consumes a lot of precious flash memory space.
 
 Please find the code here:
 
