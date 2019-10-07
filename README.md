@@ -1,6 +1,9 @@
 # miniSerial
 Very lean software-based Serial substitute.
 
+### 2019 - This is no longer being maintained by the original author.
+### Please feel free to fork, copy, adapt if you find it useable
+
 This library was designed for $3 STM32F030F4P6 ARM M0 board, which is limited to 16k of flash. This "baby" board has difficulty compiling the regular Serial function into your sketches.  MiniSerial has a minimal flash footprint, and uses no interrupts. Its functions are simple, a subset of the "print()" type functions of regular Serial.
 
 <img align="right" src="STM32F030-Dev-Brd.jpg">Baudrate is configurable. 19200 looks ideal, but higher than that is no good. Pins are configurable, and are driven only by digitalWrite and digitalRead.
